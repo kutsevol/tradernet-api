@@ -1,0 +1,18 @@
+{
+  "id": "AMD.US",
+  "nt_ticker": "AMD.US",
+  "short_name": "Advanced Micro Devices",
+  "default_ticker": "AMD",
+  "code_nm": "AMD",
+  "currency": "USD",
+  "min_step": "0.01000000",
+  "lot": "1.00000000",
+  "firstDate": "12.03.2012",
+  "mrkt": {
+    "tz": "GMT",
+    "o": "11:00:00",
+    "c": "22:00:00",
+    "dt": 180,
+    "st": 1
+  }
+}
