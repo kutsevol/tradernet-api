@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Upload Python Package](https://github.com/kutsevol/tradernet-api/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/kutsevol/tradernet-api/actions/workflows/build.yml)
+[![Upload Python Package](https://github.com/kutsevol/tradernet-api/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kutsevol/tradernet-api/actions/workflows/ci.yml)
 [![Python Version](https://img.shields.io/pypi/pyversions/tradernet_api.svg)](https://pypi.org/project/tradernet_api/)
 [![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/tradernet-api/tradernet_api/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 
