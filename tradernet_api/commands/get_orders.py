@@ -1,6 +1,6 @@
 from typing import Any
 
-from tradernet_api.models.order_model import Order
+from tradernet_api.models.command_model import GetOrdersModel
 
 
 def get_orders(self: Any, active_only: bool | None = True) -> Any:
@@ -14,6 +14,6 @@ def get_orders(self: Any, active_only: bool | None = True) -> Any:
     """
     command_name = "getNotifyOrderJson"
 
-    order_param = Order(active_only=active_only)
+    order_param = GetOrdersModel(active_only=active_only)
 
-    return self._client_v2.send_request(command=command_name, params=order_param.dict())
+    return self._client_v2.send_request(command=command_name, params=order_param)

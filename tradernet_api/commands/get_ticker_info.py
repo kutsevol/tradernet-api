@@ -1,6 +1,6 @@
 from typing import Any
 
-from tradernet_api.models.order_model import Order
+from tradernet_api.models.command_model import GetTickerInfoModel
 
 
 def get_ticker_info(self: Any, ticker: str, sup: bool | None = False) -> Any:
@@ -15,6 +15,6 @@ def get_ticker_info(self: Any, ticker: str, sup: bool | None = False) -> Any:
     """
     command_name = "getSecurityInfo"
 
-    order_param = Order(ticker=f"{ticker}.US".upper(), sup=sup)
+    order_param = GetTickerInfoModel(ticker=f"{ticker}.US".upper(), sup=sup)
 
-    return self._client_v1.send_request(command=command_name, params=order_param.dict())
+    return self._client_v1.send_request(command=command_name, params=order_param)

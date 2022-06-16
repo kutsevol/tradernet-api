@@ -1,6 +1,6 @@
 from typing import Any
 
-from tradernet_api.models.order_model import Order
+from tradernet_api.models.command_model import SendOrderModel
 
 
 def send_order(
@@ -34,7 +34,7 @@ def send_order(
     """
     command_name = "putTradeOrder"
 
-    order_param = Order(
+    order_param = SendOrderModel(
         instr_name=f"{ticker}.US".upper(),
         action_id=action,
         order_type_id=order_type,
@@ -44,4 +44,4 @@ def send_order(
         expiration_id=order_exp,
     )
 
-    return self._client_v2.send_request(command=command_name, params=order_param.dict())
+    return self._client_v2.send_request(command=command_name, params=order_param)

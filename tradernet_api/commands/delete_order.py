@@ -1,6 +1,6 @@
 from typing import Any
 
-from tradernet_api.models.order_model import Order
+from tradernet_api.models.command_model import DeleteOrderModel
 
 
 def delete_order(self: Any, order_id: str) -> Any:
@@ -14,6 +14,6 @@ def delete_order(self: Any, order_id: str) -> Any:
     """
     command_name = "delTradeOrder"
 
-    order_param = Order(order_id=order_id)
+    order_param = DeleteOrderModel(order_id=order_id)
 
-    return self._client_v2.send_request(command=command_name, params=order_param.dict())
+    return self._client_v2.send_request(command=command_name, params=order_param)
