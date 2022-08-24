@@ -1,4 +1,4 @@
-from typing import Mapping, Optional, Union
+from typing import Mapping
 
 import hashlib
 import hmac
@@ -47,10 +47,10 @@ class ClientV2(Client):
         self, data: Mapping[str, str | int | dict[str, str]], root_name: str | None = ""
     ) -> str:
         """
-        Encoded dictionary python format to url form with square brackets.
-
+        Encoded dictionary python format to url form with square brackets
         :param data: data to be encoded
         :param root_name: custom root name for nested key in dictionary
+
         :return: str
         """
         result = []
@@ -67,7 +67,6 @@ class ClientV2(Client):
     def convert_to_query_string(self, data: Mapping[str, str | dict[str, str]]) -> str:
         """
         Unpack dictionary with nested keys in string
-
         :param data: data to be unpacked
         :return: str
         """

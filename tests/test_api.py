@@ -5,18 +5,19 @@ from requests_mock import Mocker
 
 from tradernet_api.api import API
 from tradernet_api.client import ClientV2
-from tradernet_api.const import api_url
+from tradernet_api.const import Expiration, api_url, sides
 
 faker = Faker()
 
 
 def test_send_order_wrong_api_and_secret_keys(test_client: API) -> None:
     response = test_client.send_order(  # type: ignore
-        ticker=faker.name(),
-        action=faker.unique.random_int(),
-        order_type=faker.unique.random_int(),
+        ticker=faker.word(),
+        side=faker.word(ext_word_list=sides.keys()),
+        margin=faker.boolean(),
         count=faker.unique.random_int(),
-        order_exp=faker.unique.random_int(),
+        order_exp=faker.word(ext_word_list=[exp.value for exp in Expiration]),
+        limit_price=faker.unique.random_int(),
     )
 
     assert json.loads(response.content.decode())["code"] == 4
@@ -66,11 +67,12 @@ def test_send_order(requests_mock: Mocker, test_client: API) -> None:
         requests_mock.post(f"{api_url}{ClientV2.path}", json=json_file)
 
         response = test_client.send_order(  # type: ignore
-            ticker=faker.name(),
-            action=faker.unique.random_int(),
-            order_type=faker.unique.random_int(),
+            ticker=faker.word(),
+            side=faker.word(ext_word_list=sides.keys()),
+            margin=faker.boolean(),
             count=faker.unique.random_int(),
-            order_exp=faker.unique.random_int(),
+            order_exp=faker.word(ext_word_list=[exp.value for exp in Expiration]),
+            stop_price=faker.unique.random_int(),
         )
 
         assert json.loads(response.content.decode()) == json_file
