@@ -115,6 +115,11 @@ def test_send_order_model(
 def test_send_order_model_with_wrong_argument(
     input_arg: dict[str, str | int | None], exception: type[Exception]
 ) -> None:
+    """
+    Test when one of input parameter are not correct and model raise error
+    :param input_arg: parameter with incorrect value
+    :param exception: expected exception
+    """
     params = {
         "instr_name": faker.word(),
         "side": faker.word(ext_word_list=sides.keys()),
