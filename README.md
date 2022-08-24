@@ -48,7 +48,9 @@ api_client.get_orders(active_only=False)
 api_client.get_ticker_info(ticker="AAPL")
 
 # Send order to the platform
-api_client.send_order(ticker="AAPL", action=1, order_type=1, count=1, order_exp=1, limit_price=1, stop_price=1)
+api_client.send_order(ticker="AAPL", side="buy", margin=True, count=1, order_exp="day", market_order=True)
+api_client.send_order(ticker="MSFT", side="sell", margin=False, count=2, order_exp="ext", limit_price=200)
+api_client.send_order(ticker="TSLA", side="sell", margin=True, count=3, order_exp="gtc", stop_price=1000)
 
 # Delete/cancel active order
 api_client.delete_order(order_id=123456789)
