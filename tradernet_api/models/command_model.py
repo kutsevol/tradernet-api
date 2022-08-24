@@ -37,6 +37,13 @@ class SendOrderModel(BaseModel):
 
     @validator(SendOrderField.action_id.name, always=True)
     def apply_action_id(cls, v, values) -> int:  # type: ignore
+        """
+        Custom validator for action_id field. Check and convert the input parameters to action_id field by condition.
+        :param v: input parameter (default=None)
+        :param values: all parameters (default=dict)
+        :raises ValueError: if one of the fields (side or margin) has an incorrect value
+        :return: integer of action id
+        """
         if (
             action_side := sides.get(values.get(SendOrderField.side.name).lower())
         ) is None:
@@ -47,6 +54,14 @@ class SendOrderModel(BaseModel):
 
     @validator(SendOrderField.order_type_id.name, always=True)
     def apply_order_type_id(cls, v, values) -> int:  # type: ignore
+        """
+        Custom validator for order_type_id field. Check and convert the input parameters to order_type_id
+        field by condition.
+        :param v: input parameter (default=None)
+        :param values: all parameters (default=dict)
+        :raises ValueError: if no parameter is passed (market_order, limit_price or stop_price)
+        :return: integer of order type id
+        """
         types = {
             Order.limit.name: 2
             if bool(values.get(SendOrderField.limit_price.name))
@@ -69,6 +84,14 @@ class SendOrderModel(BaseModel):
 
     @validator(SendOrderField.expiration_id.name, always=True)
     def apply_expiration_id(cls, v, values) -> int:  # type: ignore
+        """
+        Custom validator for expiration_id field. Check and convert the input parameters to expiration_id
+        field by condition.
+        :param v: input parameter (default=None)
+        :param values: all parameters (default=dict)
+        :raises ValueError: if an invalid value is passed for the expiry field
+        :return: integer of expiration id
+        """
         if (
             time_exp := expirations.get(values.get(SendOrderField.expiry.name).lower())
         ) is None:
