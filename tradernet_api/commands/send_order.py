@@ -1,5 +1,6 @@
 from typing import Any
 
+from tradernet_api.const import Command
 from tradernet_api.models.command_model import SendOrderModel
 
 
@@ -32,7 +33,7 @@ def send_order(
 
     :return: Response
     """
-    command_name = "putTradeOrder"
+    command_name = Command.send_order.value
 
     order_param = SendOrderModel(
         instr_name=f"{ticker}.US".upper(),

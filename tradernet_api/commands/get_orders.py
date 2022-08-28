@@ -1,5 +1,6 @@
 from typing import Any
 
+from tradernet_api.const import Command
 from tradernet_api.models.command_model import GetOrdersModel
 
 
@@ -12,7 +13,7 @@ def get_orders(self: Any, active_only: bool | None = True) -> Any:
     :param active_only: 1/0 We show only active orders. Optional
     :return: Response
     """
-    command_name = "getNotifyOrderJson"
+    command_name = Command.get_orders.value
 
     order_param = GetOrdersModel(active_only=active_only)
 

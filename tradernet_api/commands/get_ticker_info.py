@@ -1,5 +1,6 @@
 from typing import Any
 
+from tradernet_api.const import Command
 from tradernet_api.models.command_model import GetTickerInfoModel
 
 
@@ -13,7 +14,7 @@ def get_ticker_info(self: Any, ticker: str, sup: bool | None = False) -> Any:
     :param sup: IMS and trading system format. Optional
     :return: Response (https://tradernet.com/tradernet-api/securities)
     """
-    command_name = "getSecurityInfo"
+    command_name = Command.get_ticker_info.value
 
     order_param = GetTickerInfoModel(ticker=f"{ticker}.US".upper(), sup=sup)
 

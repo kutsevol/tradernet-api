@@ -1,5 +1,6 @@
 from typing import Any
 
+from tradernet_api.const import Command
 from tradernet_api.models.command_model import SetStopOrderModel
 
 
@@ -20,7 +21,7 @@ def set_stop_order(
 
     :return: Response
     """
-    command_name = "putStopLoss"
+    command_name = Command.set_stop_order.value
 
     order_param = SetStopOrderModel(
         ticker=f"{ticker}.US".upper(), stop_loss=stop_loss, take_profit=take_profit
