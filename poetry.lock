@@ -294,7 +294,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "faker"
-version = "14.1.0"
+version = "14.2.0"
 description = "Faker is a Python package that generates fake data for you."
 category = "dev"
 optional = false
@@ -1102,7 +1102,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "26640e2278334abfbdafd84ba53cd080984d891dd709f957f76e367b498ff7ef"
+content-hash = "4683f9e5ec5ed7501b0370cfdbb4ac638c4cd0b39ffade31378ccb64e579afa7"
 
 [metadata.files]
 astroid = [
@@ -1349,8 +1349,8 @@ entrypoints = [
     {file = "entrypoints-0.4.tar.gz", hash = "sha256:b706eddaa9218a19ebcd67b56818f05bb27589b1ca9e8d797b74affad4ccacd4"},
 ]
 faker = [
-    {file = "Faker-14.1.0-py3-none-any.whl", hash = "sha256:067a03f64e555261610e69277536072997b4576dbf84b113faef3c06d85b466b"},
-    {file = "Faker-14.1.0.tar.gz", hash = "sha256:0e00bfa1eadf1493f15662edb181222fea4847764cf3f9ff3e66ee0f95c9a644"},
+    {file = "Faker-14.2.0-py3-none-any.whl", hash = "sha256:e02c55a5b0586caaf913cc6c254b3de178e08b031c5922e590fd033ebbdbfd02"},
+    {file = "Faker-14.2.0.tar.gz", hash = "sha256:6db56e2c43a2b74250d1c332ef25fef7dc07dcb6c5fab5329dd7b4467b8ed7b9"},
 ]
 filelock = [
     {file = "filelock-3.7.0-py3-none-any.whl", hash = "sha256:c7b5fdb219b398a5b28c8e4c1893ef5f98ece6a38c6ab2c22e26ec161556fed6"},

@@ -15,7 +15,7 @@ pydantic = "^1.9.1"
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.19.0"
 pytest = "^7.1.2"
-Faker = "^14.1.0"
+Faker = "^14.2.0"
 requests-mock = "^1.9.3"
 safety = "^2.1.1"
 bandit = "^1.7.4"
