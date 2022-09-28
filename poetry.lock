@@ -649,7 +649,7 @@ poetry = ">=1.2.0b1,<2.0.0"
 
 [[package]]
 name = "pre-commit"
-version = "2.19.0"
+version = "2.20.0"
 description = "A framework for managing and maintaining multi-language pre-commit hooks."
 category = "dev"
 optional = false
@@ -1117,7 +1117,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "0e7cec63b68d3b46db2c980c4c8faeba51a6d9a755c97cfe3152eb1ba3721721"
+content-hash = "b565f8e65ccd8deefbb6a7c21712248010bdab7160ca7afac469180e143499c7"
 
 [metadata.files]
 astroid = [
@@ -1576,8 +1576,8 @@ poetry-types = [
     {file = "poetry_types-0.2.2-py3-none-any.whl", hash = "sha256:518ee6e28f00a2719e3a04a076f6926a8adcb8518d3e1b61b625cc8ab65df512"},
 ]
 pre-commit = [
-    {file = "pre_commit-2.19.0-py2.py3-none-any.whl", hash = "sha256:10c62741aa5704faea2ad69cb550ca78082efe5697d6f04e5710c3c229afdd10"},
-    {file = "pre_commit-2.19.0.tar.gz", hash = "sha256:4233a1e38621c87d9dda9808c6606d7e7ba0e087cd56d3fe03202a01d2919615"},
+    {file = "pre_commit-2.20.0-py2.py3-none-any.whl", hash = "sha256:51a5ba7c480ae8072ecdb6933df22d2f812dc897d5fe848778116129a681aac7"},
+    {file = "pre_commit-2.20.0.tar.gz", hash = "sha256:a978dac7bc9ec0bcee55c18a277d553b0f419d259dadb4b9418ff2d00eb43959"},
 ]
 ptyprocess = [
     {file = "ptyprocess-0.7.0-py2.py3-none-any.whl", hash = "sha256:4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35"},
