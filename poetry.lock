@@ -830,7 +830,7 @@ six = ">=1.5"
 
 [[package]]
 name = "pyupgrade"
-version = "2.32.1"
+version = "2.38.2"
 description = "A tool to automatically upgrade syntax for newer versions."
 category = "dev"
 optional = false
@@ -1120,7 +1120,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "8e691feb55dd6d41b1201be5ef650496c4b72afb5368e827f1ebbbc4edc6cf38"
+content-hash = "80e3016ab8d256c8990acef7b4199227170a9650dddd23c838b5b6ae7e83b401"
 
 [metadata.files]
 astroid = [
@@ -1668,8 +1668,8 @@ python-dateutil = [
     {file = "python_dateutil-2.8.2-py2.py3-none-any.whl", hash = "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"},
 ]
 pyupgrade = [
-    {file = "pyupgrade-2.32.1-py2.py3-none-any.whl", hash = "sha256:d874f34870abadd7536c89678f9811076d5df93c13620f90a125355a2d31fa91"},
-    {file = "pyupgrade-2.32.1.tar.gz", hash = "sha256:11e2c3e4e2e53a61b2d8852ed154ea5683887b6ac42561622ca8d89c94fd951a"},
+    {file = "pyupgrade-2.38.2-py2.py3-none-any.whl", hash = "sha256:41bb9a9fd48fe57163b0dacffff433d6d5a63a0f7c2402918917b5f1a533342b"},
+    {file = "pyupgrade-2.38.2.tar.gz", hash = "sha256:a5d778c9de0b53975c6a9eac2d0df5adfad244a9f7d7993d8a114223ebbda367"},
 ]
 pywin32-ctypes = [
     {file = "pywin32-ctypes-0.2.0.tar.gz", hash = "sha256:24ffc3b341d457d48e8922352130cf2644024a4ff09762a2261fd34c36ee5942"},
