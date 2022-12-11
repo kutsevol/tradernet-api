@@ -39,7 +39,7 @@ jobs:
 
     - name: Run safety checks
       run: |
-        make check-safety
+        make check-security
 
     - name: Build binary wheel and a source tarball
       if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
