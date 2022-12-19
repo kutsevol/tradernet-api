@@ -801,14 +801,14 @@ pytest-metadata = "*"
 
 [[package]]
 name = "pytest-metadata"
-version = "2.0.0"
+version = "2.0.4"
 description = "pytest plugin for test session metadata"
 category = "dev"
 optional = false
 python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-pytest = ">=7.1.1,<8.0.0"
+pytest = ">=3.0.0,<8.0.0"
 
 [[package]]
 name = "python-dateutil"
@@ -1714,8 +1714,8 @@ pytest-html = [
     {file = "pytest_html-3.2.0-py3-none-any.whl", hash = "sha256:868c08564a68d8b2c26866f1e33178419bb35b1e127c33784a28622eb827f3f3"},
 ]
 pytest-metadata = [
-    {file = "pytest-metadata-2.0.0.tar.gz", hash = "sha256:08dcc2779f4393309dd6d341ea1ddc15265239b6c4d51671737e784406ec07dc"},
-    {file = "pytest_metadata-2.0.0-py3-none-any.whl", hash = "sha256:e25f1a77ed02baf1d83911604247a70d60d7dcb970aa12be38e1ed58d4d38e65"},
+    {file = "pytest_metadata-2.0.4-py3-none-any.whl", hash = "sha256:acb739f89fabb3d798c099e9e0c035003062367a441910aaaf2281bc1972ee14"},
+    {file = "pytest_metadata-2.0.4.tar.gz", hash = "sha256:fcc653f65fe3035b478820b5284fbf0f52803622ee3f60a2faed7a7d3ba1f41e"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},
