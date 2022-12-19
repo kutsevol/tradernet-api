@@ -519,11 +519,14 @@ setuptools = "*"
 
 [[package]]
 name = "packaging"
-version = "22.0"
+version = "21.3"
 description = "Core utilities for Python packages"
 category = "dev"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
+
+[package.dependencies]
+pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 
 [[package]]
 name = "pathspec"
@@ -643,15 +646,16 @@ poetry-core = ">=1.3.0,<2.0.0"
 
 [[package]]
 name = "poetry-types"
-version = "0.2.2"
-description = "A poetry plugin that automatically adds type subs as dependencies like the mypy --install-types command."
+version = "0.3.4"
+description = "A poetry plugin that adds/removes type stubs as dependencies like the mypy --install-types command."
 category = "dev"
 optional = false
 python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-colorama = ">=0.4.4,<0.5.0"
-poetry = ">=1.2.0b1,<2.0.0"
+packaging = ">=21.3,<22.0"
+poetry = ">=1.2,<2.0"
+tomlkit = ">=0.11.4,<0.12.0"
 
 [[package]]
 name = "pre-commit"
@@ -741,6 +745,17 @@ tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
 
 [package.extras]
 testutil = ["gitpython (>3)"]
+
+[[package]]
+name = "pyparsing"
+version = "3.0.9"
+description = "pyparsing module - Classes and methods to define and execute parsing grammars"
+category = "dev"
+optional = false
+python-versions = ">=3.6.8"
+
+[package.extras]
+diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
 name = "pyrsistent"
@@ -1092,7 +1107,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1e0185c5cb4de58a95ffb728b7ed93baa643ba83f1e0c5e28b91fccc39224068"
+content-hash = "3ff3b68597776ae77bbb63fb3131da3aa4b9dbe32d97f1d2348ddcf0bfe0dd4d"
 
 [metadata.files]
 astroid = [
@@ -1590,8 +1605,8 @@ nodeenv = [
     {file = "nodeenv-1.7.0.tar.gz", hash = "sha256:e0e7f7dfb85fc5394c6fe1e8fa98131a2473e04311a45afb6508f7cf1836fa2b"},
 ]
 packaging = [
-    {file = "packaging-22.0-py3-none-any.whl", hash = "sha256:957e2148ba0e1a3b282772e791ef1d8083648bc131c8ab0c1feba110ce1146c3"},
-    {file = "packaging-22.0.tar.gz", hash = "sha256:2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3"},
+    {file = "packaging-21.3-py3-none-any.whl", hash = "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"},
+    {file = "packaging-21.3.tar.gz", hash = "sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"},
 ]
 pathspec = [
     {file = "pathspec-0.9.0-py2.py3-none-any.whl", hash = "sha256:7d15c4ddb0b5c802d161efc417ec1a2558ea2653c2e8ad9c19098201dc1c993a"},
@@ -1630,8 +1645,8 @@ poetry-plugin-export = [
     {file = "poetry_plugin_export-1.2.0.tar.gz", hash = "sha256:9a1dd42765408931d7831738749022651d43a2968b67c988db1b7a567dfe41ef"},
 ]
 poetry-types = [
-    {file = "poetry-types-0.2.2.tar.gz", hash = "sha256:ab234515cf1d8c1f77a25fb1b0a8ff85845e3f39a2a9fc7dbecf7984c9e07a80"},
-    {file = "poetry_types-0.2.2-py3-none-any.whl", hash = "sha256:518ee6e28f00a2719e3a04a076f6926a8adcb8518d3e1b61b625cc8ab65df512"},
+    {file = "poetry-types-0.3.4.tar.gz", hash = "sha256:1c4b404da41c3b86fbb687862c44ad7c09961cd6c04b0f611ef7f962d84b2513"},
+    {file = "poetry_types-0.3.4-py3-none-any.whl", hash = "sha256:d4afde2b819ac2d1f29c68d6b943885b5ccdca08a26fa8a64756e9d2c16de4c2"},
 ]
 pre-commit = [
     {file = "pre_commit-2.20.0-py2.py3-none-any.whl", hash = "sha256:51a5ba7c480ae8072ecdb6933df22d2f812dc897d5fe848778116129a681aac7"},
@@ -1693,6 +1708,10 @@ pydocstyle = [
 pylint = [
     {file = "pylint-2.13.9-py3-none-any.whl", hash = "sha256:705c620d388035bdd9ff8b44c5bcdd235bfb49d276d488dd2c8ff1736aa42526"},
     {file = "pylint-2.13.9.tar.gz", hash = "sha256:095567c96e19e6f57b5b907e67d265ff535e588fe26b12b5ebe1fc5645b2c731"},
+]
+pyparsing = [
+    {file = "pyparsing-3.0.9-py3-none-any.whl", hash = "sha256:5026bae9a10eeaefb61dab2f09052b9f4307d44aee4eda64b309723d8d206bbc"},
+    {file = "pyparsing-3.0.9.tar.gz", hash = "sha256:2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"},
 ]
 pyrsistent = [
     {file = "pyrsistent-0.19.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:d6982b5a0237e1b7d876b60265564648a69b14017f3b5f908c5be2de3f9abb7a"},
