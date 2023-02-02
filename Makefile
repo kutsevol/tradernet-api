@@ -49,7 +49,7 @@ check-codestyle:
 	poetry run black --diff --check --config pyproject.toml ./
 	poetry run darglint --docstring-style sphinx --verbosity 2 tradernet_api tests
 
-.PHONY: check-safety
+.PHONY: check-security
 check-safety:
 	poetry check
 	poetry run bandit -ll --recursive tradernet_api tests

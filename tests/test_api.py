@@ -138,7 +138,6 @@ def test_get_orders_active_only(requests_mock: Mocker, test_client: API) -> None
 
 
 def test_get_orders(requests_mock: Mocker, test_client: API) -> None:
-
     with open("tests/responses/get_orders.json") as file:
         json_file = json.load(file)
 
