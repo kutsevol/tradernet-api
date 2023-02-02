@@ -1,8 +1,7 @@
-from typing import Mapping
-
 import hashlib
 import hmac
 import time
+from collections.abc import Mapping
 from dataclasses import dataclass
 
 from requests import Response
