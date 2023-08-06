@@ -29,7 +29,7 @@ pyupgrade = "^3.0.0"
 pydocstyle = "^6.1.1"
 pylint = "^2.17.3"
 coverage = "^7.0"
-poetry-types = "^0.3.6"
+poetry-types = "^0.4.0"
 
 [tool.black]
 # https://github.com/psf/black
