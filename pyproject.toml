@@ -18,7 +18,7 @@ pytest = "^7.2.0"
 Faker = "^19.1.0"
 requests-mock = "^1.10.0"
 bandit = "^1.7.5"
-pytest-cov = "^4.0.0"
+pytest-cov = "^4.1.0"
 pytest-html = "^3.2.0"
 coverage-badge = "^1.1.0"
 isort = {extras = ["colors"], version = "^5.10.1"}
