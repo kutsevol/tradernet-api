@@ -9,27 +9,27 @@ include = ["LICENSE",]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-requests = "^2.27.1"
-pydantic = "^1.9.1"
+requests = "2.31.0"
+pydantic = "1.10.12"
 
-[tool.poetry.dev-dependencies]
-pre-commit = "^3.0.0"
-pytest = "^7.2.0"
-Faker = "^19.1.0"
-requests-mock = "^1.10.0"
-bandit = "^1.7.5"
-pytest-cov = "^4.0.0"
-pytest-html = "^3.2.0"
-coverage-badge = "^1.1.0"
-isort = {extras = ["colors"], version = "^5.10.1"}
-black = {version = "^23.3.0", allow-prereleases = true}
-darglint = "^1.8.1"
-mypy = "^1.0"
-pyupgrade = "^3.0.0"
-pydocstyle = "^6.1.1"
-pylint = "^2.17.3"
-coverage = "^7.0"
-poetry-types = "^0.3.6"
+[tool.poetry.group.dev.dependencies]
+pytest = "7.4.0"
+pre-commit = "3.3.3"
+faker = "19.3.1"
+requests-mock = "1.11.0"
+bandit = "1.7.5"
+pytest-cov = "4.1.0"
+pytest-html = "3.2.0"
+coverage-badge = "1.1.0"
+darglint = "1.8.1"
+mypy = "1.5.1"
+pyupgrade = "3.10.1"
+pydocstyle = "6.1.1"
+pylint = "2.17.5"
+coverage = "7.3.0"
+poetry-types = "0.5.0"
+black = {version = "23.7.0", allow-prereleases = true}
+isort = {version = "5.12.0", extras = ["colors"]}
 
 [tool.black]
 # https://github.com/psf/black
