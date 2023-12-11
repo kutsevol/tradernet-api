@@ -29,7 +29,7 @@ pylint = "2.17.5"
 coverage = "7.3.0"
 poetry-types = "0.5.0"
 black = {version = "23.7.0", allow-prereleases = true}
-isort = {version = "5.12.0", extras = ["colors"]}
+isort = {version = "5.13.0", extras = ["colors"]}
 
 [tool.black]
 # https://github.com/psf/black
